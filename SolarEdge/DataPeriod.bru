@@ -1,0 +1,15 @@
+meta {
+  name: DataPeriod
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/dataPeriod?api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  api_key: {{apikey}}
+}

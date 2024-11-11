@@ -1,0 +1,15 @@
+meta {
+  name: Overview
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/overview?api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  api_key: {{apikey}}
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Domain-AliasUpdate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{SmarterMailUrl}}api/v1/settings/domain/alias
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "alias": {
+      "name": "testalias",
+      "aliasTargetList": [
+        "johan.klinge@gmail.com",
+        "emma.klinge03@gmail.com"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Lists-GetAllMailingLists
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{SmarterMailUrl}}api/v1/settings/domain/mailing-lists/list
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

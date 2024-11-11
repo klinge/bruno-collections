@@ -1,0 +1,18 @@
+meta {
+  name: Energy DAY
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/energy?timeUnit=DAY&endDate=2024-11-10&startDate=2023-11-10&api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  timeUnit: DAY
+  endDate: 2024-11-10
+  startDate: 2023-11-10
+  api_key: {{apikey}}
+}

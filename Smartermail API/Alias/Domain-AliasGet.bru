@@ -1,0 +1,26 @@
+meta {
+  name: Domain-AliasGet
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{SmarterMailUrl}}api/v1/settings/domain/alias-get
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+  "name": "testalias@sofialinnea.se"
+  }
+}
+
+assert {
+  res.status: eq 200
+  res.body.alias: isDefined 
+}

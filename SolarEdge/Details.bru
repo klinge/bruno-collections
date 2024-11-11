@@ -1,0 +1,17 @@
+meta {
+  name: Details
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/power?startTime=2024-01-10%2009:00:00&endTime=2024-01-10%2012:30:00&api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  startTime: 2024-01-10%2009:00:00
+  endTime: 2024-01-10%2012:30:00
+  api_key: {{apikey}}
+}

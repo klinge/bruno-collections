@@ -1,0 +1,15 @@
+meta {
+  name: PowerDetails DAY
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://monitoringapi.solaredge.com/equipment/{{siteid}}/sensors?api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  api_key: {{apikey}}
+}

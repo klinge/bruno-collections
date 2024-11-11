@@ -1,0 +1,18 @@
+meta {
+  name: Energy MONTH
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/energy?timeUnit=MONTH&endDate=2024-10-31&startDate=2023-01-01&api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  timeUnit: MONTH
+  endDate: 2024-10-31
+  startDate: 2023-01-01
+  api_key: {{apikey}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Domain-SearchAliases
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{SmarterMailUrl}}api/v1/settings/domain/aliases/search?search=vi
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: vi
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

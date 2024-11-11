@@ -1,0 +1,24 @@
+meta {
+  name: chargeHistory
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/chargehistory?installationId={{installationId}}&From=2024-02-01T00:00:00.000Z&To=2024-02-13T23:59:59.000Z&GroupBy=2&DetailLevel=0
+  body: none
+  auth: bearer
+}
+
+params:query {
+  installationId: {{installationId}}
+  From: 2024-02-01T00:00:00.000Z
+  To: 2024-02-13T23:59:59.000Z
+  GroupBy: 2
+  DetailLevel: 0
+  ~SortProperty: null
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

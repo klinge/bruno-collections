@@ -1,0 +1,33 @@
+meta {
+  name: GetAuthToken
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/oauth/token
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  username: {{username}}
+  password: {{password}}
+  grant_type: password
+  scope: offline_access
+}
+
+assert {
+  res.status: eq 200
+  res.body.access_key: isDefined 
+}
+
+script:post-response {
+  var jsonData = res.getBody();
+  bru.setVar("access_token", jsonData.access_token);
+}
+
+tests {
+  
+  
+}

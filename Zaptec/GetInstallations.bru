@@ -1,0 +1,15 @@
+meta {
+  name: GetInstallations
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/installation
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

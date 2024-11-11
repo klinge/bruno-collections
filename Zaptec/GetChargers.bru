@@ -1,0 +1,28 @@
+meta {
+  name: GetChargers
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/chargers
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+tests {
+  test("Response status code is 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Response body has a property called Data", function () {
+      expect(res.getBody()).to.have.property('Data');
+  });
+  test("Data array contains 53 elements", function () {
+      const responseData = res.getBody().Data;
+      expect(responseData).to.be.an('array').with.lengthOf(53);
+  });
+}

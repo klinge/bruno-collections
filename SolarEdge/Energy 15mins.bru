@@ -1,0 +1,18 @@
+meta {
+  name: Energy 15mins
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{endpoint}}/{{siteid}}/energy?timeUnit=QUARTER_OF_AN_HOUR&endDate=2024-11-11&startDate=2024-11-11&api_key={{apikey}}
+  body: none
+  auth: none
+}
+
+params:query {
+  timeUnit: QUARTER_OF_AN_HOUR
+  endDate: 2024-11-11
+  startDate: 2024-11-11
+  api_key: {{apikey}}
+}

@@ -1,0 +1,18 @@
+meta {
+  name: METNO Sunrise
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://api.met.no/weatherapi/sunrise/3.0/sun?lat=59.3333&lon=18.0692
+  body: none
+  auth: none
+}
+
+params:query {
+  lat: 59.3333
+  lon: 18.0692
+  ~offset: +02:00
+  ~date: 2022-07-14
+}
